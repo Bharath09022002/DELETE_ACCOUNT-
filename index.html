@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account – MeetApp</title>
+  <meta name="description" content="Request deletion of your MeetApp account and learn what happens to your data." />
+  <style>
+    /* ── Reset & Base ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #f4f6f9;
+      color: #2c3e50;
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Container ────────────────────────────────────── */
+    .container {
+      max-width: 640px;
+      margin: 48px auto;
+      padding: 0 20px;
+      flex: 1;
+    }
+
+    /* ── Card ─────────────────────────────────────────── */
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, .08);
+      padding: 40px 36px;
+    }
+
+    /* ── App Brand ────────────────────────────────────── */
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #4f46e5;
+      letter-spacing: .4px;
+      margin-bottom: 8px;
+    }
+
+    /* ── Heading ──────────────────────────────────────── */
+    h1 {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: #1e293b;
+      margin-bottom: 12px;
+    }
+
+    .intro {
+      color: #64748b;
+      margin-bottom: 32px;
+    }
+
+    /* ── Sections ─────────────────────────────────────── */
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 14px;
+      margin-top: 32px;
+    }
+
+    /* ── Steps ────────────────────────────────────────── */
+    .steps {
+      list-style: none;
+      counter-reset: step;
+      padding: 0;
+    }
+
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .steps li:last-child { border-bottom: none; }
+
+    .steps li::before {
+      content: counter(step);
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eef2ff;
+      color: #4f46e5;
+      font-weight: 700;
+      font-size: .85rem;
+      border-radius: 50%;
+    }
+
+    /* ── Alternative ──────────────────────────────────── */
+    .alt-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-top: 16px;
+    }
+
+    .alt-box a {
+      color: #4f46e5;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .alt-box a:hover { text-decoration: underline; }
+
+    /* ── Info list ────────────────────────────────────── */
+    .info-list {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    .info-list li {
+      padding: 4px 0;
+      color: #475569;
+    }
+
+    .info-list li::marker { color: #4f46e5; }
+
+    /* ── Divider ──────────────────────────────────────── */
+    .divider {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 32px 0;
+    }
+
+    /* ── Footer ───────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 24px 20px;
+      color: #94a3b8;
+      font-size: .85rem;
+    }
+
+    /* ── Responsive ───────────────────────────────────── */
+    @media (max-width: 480px) {
+      .container { margin: 24px auto; }
+      .card { padding: 28px 20px; border-radius: 12px; }
+      h1 { font-size: 1.35rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <p class="brand">MeetApp</p>
+      <h1>Account Deletion Request</h1>
+      <p class="intro">
+        You can request the permanent deletion of your MeetApp account at any time.
+        Once processed, all associated personal data will be removed from our systems.
+      </p>
+
+      <!-- Steps -->
+      <h2 class="section-title">How to Delete Your Account</h2>
+      <ol class="steps">
+        <li>Open the <strong>MeetApp</strong> app on your device.</li>
+        <li>Go to <strong>Profile</strong> or <strong>Settings</strong>.</li>
+        <li>Tap on <strong>"Delete Account"</strong> and confirm your request.</li>
+      </ol>
+
+      <!-- Alternative -->
+      <h2 class="section-title">Alternative Option</h2>
+      <div class="alt-box">
+        If you're unable to delete your account from the app, you can send an email to
+        <a href="mailto:support@meetapp.com">support@meetapp.com</a>
+        with the subject <strong>"Delete My Account"</strong> and we'll process your request.
+      </div>
+
+      <hr class="divider" />
+
+      <!-- What happens after deletion -->
+      <h2 class="section-title">What Happens After Deletion</h2>
+      <ul class="info-list">
+        <li>All personal data will be <strong>permanently deleted within 7 days</strong>.</li>
+        <li>Some data may be retained if required for <strong>legal or regulatory purposes</strong>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>&copy; 2026 MeetApp</footer>
+
+</body>
+</html>
